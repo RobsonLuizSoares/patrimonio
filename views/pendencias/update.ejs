@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+<div class='container my-3'>
+  <h1 class='text-center'>Editar Pendência</h1>
+  <p><a href="/pendencias"> Voltar para Lista de Pendências</a></p>
+</div>
+
+<div class='container'>
+  <div class='alert alert-info'>
+    <form method='post'>
+    <div class='row'>
+      <div class='col-md-2'>
+        <div class="form-group">
+          <label for="ul">UL</label>
+          <input type="text" class="form-control" id="ul" name='ul' placeholder="UL" value='<%= pendencia.ul %>'>
+        </div>
+      </div>
+      <div class='col-md-6'>
+        <div class="form-group">
+          <label for="local">Local</label>
+          <input type="text" class="form-control" id="local" name='local' placeholder="Local" value='<%= pendencia.local %>'>
+        </div>
+      </div>
+      <div class='col-md-4'>
+        <div class="form-group">
+          <label for="responsavel">Responsável</label>
+          <input type="text" class="form-control" id="responsavel" name='responsavel' placeholder="Responsável" value='<%= pendencia.responsavel %>'>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class='row'>
+      <div class='col-md-6'>
+        <label for="termo">Termo de Responsabilidade</label>
+        <select class="form-control" id="termo" name='termo' value='<%= pendencia.termo %>'>
+          <option value='Não'>Não</option>
+          <option value='Sim'>Sim</option>
+        </select>
+      </div>
+      <div class='col-md-6'>
+        <label for="bens">Todos os Bens Lidos?</label>
+        <select class="form-control" id="bens" name='bens' value='<%= pendencia.bens %>'>
+          <option value='Não'>Não</option>
+          <option value='Sim'>Sim</option>
+        </select>
+      </div>
+    </div>
+    <hr>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class="form-group">
+          <label for="descricao">Descrição da Pendência</label>
+          <textarea class="form-control" id="descricao" name='descricao' rows="3" value='<%= pendencia.descricao %>'></textarea>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class='btn btn-primary'>Editar</button>
+    <a href="/pendencias"><button type="button" class='btn btn-secondary'>Voltar</button></a>
+  </form>
+  </div>
+</div>
+
+
+<%- include('../partials/footer') %>
