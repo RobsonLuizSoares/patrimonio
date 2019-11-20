@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   host: 'us-cdbr-iron-east-05.cleardb.net',
   user: 'ba8a72dcf3a647',
   password: '4cbeb51c',
-  database: '`heroku_afac53f1de8d958`'
+  database: 'heroku_afac53f1de8d958'
 })
 
 const dependencies = {
